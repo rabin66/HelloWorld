@@ -22,7 +22,20 @@ show the following output from the following input
 public class Qno2 {
 
     public static void main(String[] args) {
-//put your code here
+        Scanner sc=new Scanner(System.in);      
+        
+        String[] S=new String[3];
+        for(int i=0;i<3;i++){
+            String str=sc.next();
+            int num=sc.nextInt(); 
+            String asString1b=String.format("%03d",num);
+            String asString1a=String.format("%-15s",str);
+            S[i]=asString1a.concat(asString1b);
+        }
+        for(String a:S){
+            System.out.println(a);
+        }
+
     }
 }
 
